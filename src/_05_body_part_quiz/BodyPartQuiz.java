@@ -53,6 +53,7 @@ public class BodyPartQuiz {
 
 		// 1. Make an int variable to hold the score.
 		int score = 0;
+		int i = 0;
 		// 2. Set the size of the window in the initializeGui() method 
 
 		// 4. Ask the user who this person is and store their answer
@@ -60,7 +61,10 @@ public class BodyPartQuiz {
 
 		// 5. Check their answer. If they guessed correctly:
 		// -- Tell them they are right and increase the score by 1
-
+		if(guess.equalsIgnoreCase("arnold")) {
+			JOptionPane.showMessageDialog(null, "Correct");
+			score ++;
+		}
 		// 6. Otherwise:
 		// -- Tell them they are wrong and who the person is
 
