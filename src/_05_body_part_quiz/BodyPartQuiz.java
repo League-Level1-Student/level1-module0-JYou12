@@ -35,6 +35,7 @@ public class BodyPartQuiz {
 	}
 
 	private void initializeGui() {
+		
 		initializeImageList();
 		imageIterator = imageList.iterator();
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -51,11 +52,11 @@ public class BodyPartQuiz {
 	private void startQuiz() {
 
 		// 1. Make an int variable to hold the score.
-
+		int score = 0;
 		// 2. Set the size of the window in the initializeGui() method 
 
 		// 4. Ask the user who this person is and store their answer
-		String guess = JOptionPane.showInputDialog("who is this?");
+		String guess = JOptionPane.showInputDialog("Who is this?");
 
 		// 5. Check their answer. If they guessed correctly:
 		// -- Tell them they are right and increase the score by 1

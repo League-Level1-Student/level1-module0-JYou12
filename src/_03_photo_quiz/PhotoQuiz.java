@@ -28,15 +28,16 @@ public class PhotoQuiz {
 		// “Copy Image Address”)
 
 		// 2. create a variable of type "Component" that will hold your image
-		Component comp;
 		// 3. use the "createImage()" method below to initialize your Component
-		comp = createImage(
-				"https://banner2.kisspng.com/20171218/f41/apple-logo-png-5a37e212dfda18.3311147015136117949169.jpg");
+		String URL = "https://image.shutterstock.com/image-vector/vector-illustration-apple-260nw-505576972.jpg";
 		// 4. add the image to the quiz window
+		Component comp;
+		comp = createImage(URL);
+		comp.setSize(100, 100);
 		quizWindow.add(comp);
 		// 5. call the pack() method on the quiz window
 		quizWindow.pack();
-		/*
+		
 		// 6. ask a question that relates to the image
 		String question = JOptionPane.showInputDialog("What is this?");
 		// 7. print "CORRECT" if the user gave the right answer
@@ -52,17 +53,25 @@ public class PhotoQuiz {
 		quizWindow.remove(comp);
 		// 10. find another image and create it (might take more than one line
 		// of code)
-		Component comp2 = createImage(
-				"https://i.pinimg.com/originals/f9/87/0d/f9870d53a830b4425e76c82111b3cd84.png");
+		URL = "https://i.pinimg.com/originals/f9/87/0d/f9870d53a830b4425e76c82111b3cd84.png";
+		Component comp2 = createImage(URL);
 		// 11. add the second image to the quiz window
 		quizWindow.add(comp2);
 		// 12. pack the quiz window
 		quizWindow.pack();
 		// 13. ask another question
+		String question2 = JOptionPane.showInputDialog("What fruit is this???");
+		if (question2.equalsIgnoreCase("orange")) {
+			// 8. print "INCORRECT" if the answer is wrong
+			JOptionPane.showMessageDialog(null, "CORRECT");
+		} else {
+			JOptionPane.showMessageDialog(null, "INCORRECT");
 
+		}
+		
 		// 14+ check answer, say if correct or incorrect, etc.
 
-*/
+
 	}
 
 	private Component createImage(String imageUrl) throws MalformedURLException {
